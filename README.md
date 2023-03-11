@@ -22,6 +22,8 @@ is the result from guessing `cajon`
 
 Outlined in the file
 
-I didn't spent much time looking up something prior to coding so there are quite a bit of improvements that could be made. A lot could be simply Googling other folks solutions. However, this so far has been guessing the system in around 4-5 tries.
+I didn't spent much time playing the game and haven't looked at online solutions from others. A lot could be simply Googling other folks solutions and playing the game more.
+
+This however has been guessing the system in around 4-5 tries.
 
 A simple fitness script could also be written to find how often the system guesses the right answer to determine the fitness of the guesser as changes are made.
