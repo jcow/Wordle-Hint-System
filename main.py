@@ -118,10 +118,6 @@ def set_user_inputs_into_state(user_input):
         char = u[0]
         y_n_m = u[1]
 
-        print(char)
-        print(y_n_m)
-        print('------')
-
         if y_n_m == YES:
             found_letters[counter] = char
         elif y_n_m == NO:
