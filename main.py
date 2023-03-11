@@ -1,6 +1,21 @@
 
 import load_words
 
+"""
+
+Potential improvements:
+
+Well you probably should have played the game a bit before writing a solver lol.
+
+Big win would be to track the position of the "mabye's". You're throwing away important information.
+
+There's also something with duplictes that I'm fully unsure how they work.
+
+
+"""
+
+
+
 
 NO = 'n'
 MAYBE = 'm'
@@ -70,12 +85,20 @@ def get_scored_word_list(current_word_list, current_char_freq):
 
     """
         You get a higher score with more of a char freq
+        Lower of a score if there are duplicates
     """
 
     def _score(word, current_char_freq):
         score = 0
+        char_count_for_word = {}
         for char in word:
-            if char in current_char_freq:
+            if char not in char_count_for_word:
+                char_count_for_word[char] = 0
+
+            char_count_for_word[char] += 1
+
+        for char in word:
+            if char in current_char_freq and char_count_for_word[char] == 1:
                 score += current_char_freq[char]
 
         return score
